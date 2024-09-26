@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnStatic</title>
+    <link rel="icon" type="image/x-icon" href="img/logos/logo.png">
+    <link rel="stylesheet" href="style/mainStyle.css">
+    <script src="https://kit.fontawesome.com/c96d3426c0.js" crossorigin="anonymous"></script>
+</head>
+<body id="top">
+    <script>
+        drops = 1;
+        function drop(){
+            if (drops == 1){ 
+                document.getElementById('phoneOut').style.top = "0";
+                document.getElementById('container').style.padding = "50px 10px"
+                drops = 0;
+            }
+            else{ 
+                document.getElementById('phoneOut').style.top = "98px";
+                document.getElementById('container').style.padding = "150px 10px"
+                drops = 1;
+            }
+        }
+        function load(){
+            document.getElementById('firstBox').style.opacity = "100%";
+        }
+        addEventListener("load" , load);
+    </script>
+    <div >
+        <header >
+            <div class="logo">
+                <img src="img/logos/logo.png" alt="logo">
+            </div>
+            <nav>
+                <ul class="pc">
+                    <li><a href="index.html">Home <span></span></a></li>
+                    <li><a href="pages/html.html">Html <span></span></a></li>
+                    <li><a href="pages/css.html">Css <span></span></a></li>
+                    <li><a href="pages/userInterface.html">User-Interface <span></span></a></li>
+                    <li><a href="pages/userExperience.html">User-Experience <span></span></a></li>
+                    <li><a href="pages/about.html">About<span></span></a></li>
+                </ul>
+                <ul class="phoneIn phone">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i><span style="left: 15px;">HOME</span></a></li>
+                    <li onclick="drop()"><i class="fa-solid fa-bars" ></i><span style="top: -20px;">NAV</span></li>
+                </ul>
+            </nav>
+            <nav class="phone" id="phoneOut">
+                <ul>
+                    <li><a href="pages/html.html"><i class="fa-brands fa-html5"></i><span>HTML</span></a></li>
+                    <li><a href="pages/css.html"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></a></li>
+                    <li><a href="pages/userInterface.html"><i class="fa-solid fa-user-gear"><span>UI</span></i></a></li>
+                    <li><a href="pages/userExperience.html"><i class="fa-solid fa-user-check"></i><span>UX</span></a></li>
+                    <li><a href="pages/about.html"><i class="fa-solid fa-user"></i><span>ABOUT</span></a></li>    
+                </ul>
+            </nav>
+            <div class="logo" >
+                <a href="#top"><i class="fa-solid fa-angles-right" ></i></a>
+            </div>
+        </header>
+        <main>
+            <a id="feedback" href="pages/feedback.html"><i class="fa-solid fa-pen-to-square"></i> FeedBack</a>
+            <div id="container">
+                <div id="firstBox" >
+                    <h2> Visual Design & User Experience <i class="fa-solid fa-house"></i></h2>
+                    <div class="secBoxContent">
+                        <ol>
+                            <li class="liTitle" >Hi, i am Soufiane El Mameri, and i'm here to help!</li>
+                            <li>This website is dedicated to the module of Static websites in CFHN. Whether you're researching the course or doing the course & need to study, i split it into several pages to help you
+                            better understand each topic covered in the module, and even more!</li>
+                            <h3>You can find different topics below!</h3>
+                        </ol>
+                        <div>
+                            <img src="img/logos/wlc.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="arrowDown">
+                    <a href="#down"><i class="fa-solid fa-angles-right"></i></a>
+                    <span id="down"></span>
+                </div >
+                <div class="cards">
+                    <div class="card">
+                        <h2>HTML</h2>
+                        <a href="pages/html.html" >
+                            <img src="img/logos/html.png" alt="HTML Logo">
+                        </a>
+                    </div>
+                    <div class="card">
+                        <h2>CSS</h2>
+                        <a href="pages/css.html">
+                            <img src="img/logos/css.png" alt="CSS Logo">
+                        </a>
+                    </div>
+                    <div class="card">
+                        <h2>User Interface</h2>
+                        <a  href="pages/userInterface.html">
+                            <img src="img/logos/userinter.png" alt="User Interface Logo">
+                        </a>
+                    </div>
+                    <div class="card">
+                        <h2>User Experience</h2>
+                        <a href="pages/userExperience.html" >
+                            <img src="img/logos/userexp.png" alt="User Experience Logo">
+                        </a>
+                    </div>
+                    <div class="card">
+                        <h2>About Me</h2>
+                        <a  href="pages/about.html"  >
+                            <img src="img/logos/about.png" alt="about Logo">
+                        </a>
+                    </div>
+                    <div class="card">
+                        <h2>FeedBack</h2>
+                        <a href="pages/feedback.html"  >
+                            <img src="img/logos/feedback.png" alt="HTML Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="box">
+                <h2>What You Can Find on Each Page</h2>
+                        <dl>
+                            <dt>HTML:</dt>
+                            <dd>On the page - Basic terms, how to code & examples of HTML</dd>
+                            <dd>Hyper Text Markup Language is a formatting system in which codes are used to construct a webpage/website which can include text, images, sound, videos, and links. HTML is like the skeleton of a webpage/website - <a href="pages/html.html">Learn More</a></dd>
+                            <dt>CSS:</dt>
+                            <dd>On the page - Basic terms, how to code & examples of CSS</dd>
+                            <dd>Cascading Style Sheets is a coding language that is used for designing the layout of web pages. CSS is like the skin of the website/webpage - <a href="pages/css.html">Learn More</a> </dd>
+                            <dt>User Interface:</dt>
+                            <dd>On the page - Defining user interfaces, why they're important & examples of user interfaces</dd>
+                            <dd>User Interface (aka UI) is the part of a device or application that a user sees and interacts with - <a href="pages/userInterface.html">Learn More</a></dd>
+                            <dt>User Experience:</dt>
+                            <dd>On the page - Qualities of an enjoyable user experience, why it's important & examples of user-friendly websites</dd>
+                            <dd>User Experience (aka UX) is the overall experience of a person (the user) using a website or an application. It focuses on understanding users - what they need, what they value, and their abilities & limitations -
+                                <a href="pages/userExperience.html">Learn More</a>
+                            </dd>
+                            <dt>About Me:</dt>
+                            <dd>A brief biography about the creator of the website - <a href="pages/about.html">Learn More</a></dd>
+                            <dt>FeedBack:</dt>
+                            <dd>A feedback on your experience of my website, to let me know if there is anything that i can do to improve the overall experience for users - <a href="pages/feedback.html">Learn More</a></dd>
+                        </dl>
+                </div>
+
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnStatic</title>
+    <link rel="icon" type="image/x-icon" href="../img/logos/logo.png">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <script src="https://kit.fontawesome.com/c96d3426c0.js" crossorigin="anonymous"></script>
+</head>
+<body id="top">
+    <script>
+        test = 1;
+        drops =1;
+        function slidein(){
+            if (test == 1){
+                document.getElementById('nav').style.left = "0";
+                document.getElementById('rightArrow').style.animation = "none"
+                document.getElementById('rightArrow').style.transform = "rotate(180deg) translateY(-45%)"
+                document.getElementById('rightArrow').style.right = "0"
+                document.getElementById('rightArrow').style.color = "white"
+                test = 0;
+            }else{
+                document.getElementById('nav').style.left = "-250px";
+                document.getElementById('rightArrow').style.transform = "rotate(0deg)"
+                document.getElementById('rightArrow').style.right = "-50px"
+                document.getElementById('rightArrow').style.color = "black"
+                test = 1;
+            }
+        }
+        function drop(){
+            if (drops == 1){ 
+                document.getElementById('phoneOut').style.top = "0";
+                document.getElementById('container').style.padding = "50px 10px"
+                drops = 0;
+            }
+            else{ 
+                document.getElementById('phoneOut').style.top = "98px";
+                document.getElementById('container').style.padding = "150px 10px"
+                drops = 1;
+            }
+        }
+        function load(){
+            document.getElementById('firstBox').style.opacity = "100%";
+        }
+        addEventListener("load" , load);
+    </script>
+    <header>
+        <div class="logo">
+            <img src="../img/logos/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="pc">
+                <li><a href="../index.html">Home <span></span> </a></li>
+                <li><a href="html.html">Html <span></span></a></li>
+                <li><a href="css.html">Css <span></span></a></li>
+                <li><a href="userInterface.html">User-Interface <span></span></a></li>
+                <li><a href="userExperience.html">User-Experience <span></span></a></li>
+                <li><a href="about.html">About<span></span></a></li>
+            </ul>
+            <ul class="phoneIn phone">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span style="left: 15px;">HOME</span></a></li>
+                <li onclick="drop()"><i class="fa-solid fa-bars" style="color: white;"></i><span style="top: -20px;">NAV</span></li>              
+            </ul>
+        </nav>
+        <nav class="phone" id="phoneOut">
+            <ul>
+                <li><a href="html.html"><i class="fa-brands fa-html5"></i><span>HTML</span></a></li>
+                <li><a href="css.html"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></a></li>
+                <li><a href="userInterface.html"><i class="fa-solid fa-user-gear"></i><span>UI</span></a></li>
+                <li><a href="userExperience.html"><i class="fa-solid fa-user-check"></i><span>UX</span></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i><span>ABOUT</span></a></li>    
+            </ul>
+        </nav>
+        <div class="logo" >
+            <a href="#top"><i class="fa-solid fa-angles-right" ></i></a>
+        </div>
+    </header>
+    <main >
+        <nav id="nav">
+            <ul>
+                <li onclick="slidein()"><a href="#structure">Page Structure</a></li>
+                <li onclick="slidein()"><a href="#tags">HTML Tags</a></li>
+                <li onclick="slidein()"><a href="#attributes">HTML Attributes</a></li>
+                <li onclick="slidein()"><a href="#links">HTML Links</a></li>
+                <li onclick="slidein()"><a href="#lists">HTML Lists</a></li>
+                <li onclick="slidein()"><a href="#tables">HTML Tables</a></li>
+                <li onclick="slidein()"><a href="#forms">HTML Forms</a></li>
+                <li onclick="slidein()"><a href="#iframe">HTML Iframes</a></li>
+                <li onclick="slidein()"><a href="https://www.w3schools.com/html/default.asp" target="_Blank">FULL Tutorial </a></li>
+                <div><i id="rightArrow" onclick="slidein()" class="fa-solid fa-angles-right"></i></div>
+            </ul>
+        </nav>
+        <a id="feedback" href="feedback.html"><i class="fa-solid fa-pen-to-square"></i> FeedBack</a>
+        <div id="container">
+            <div id="firstBox">
+                <h2>HyperText Markup Language <i class="fa-brands fa-html5"></i></h2>
+                <div class="secBoxContent">
+                    <ol>
+                        <li class="liTitle">What is HTML?</li>
+                            <ul>
+                                <li>Stands for HyperText Markup Language.</li>
+                                <li>Standard markup language for creating web pages.</li>
+                                <li>Give structure to a webpage.</li>
+                                <li>Consists of a series of elements, used to enclose/wrap different parts of the content to make it appear or act a certain way.</li>
+                                <li>File consisting of <em>"name</em>.html".</li>
+                            </ul>
+                        <li class="liTitle">What is HyperText?</li>
+                            <ul>
+                                <li>It is the text which links to other text or links to another page, example: <a href="https://www.ofppt.ma/">www.ofppt.ma</a></li>
+                            </ul>
+                        <li class="liTitle">What is Markup?</li>
+                            <ul>
+                                <li>It is the code used to give meaning to page content(text, images, videos)</li>
+                            </ul>
+                    </ol>
+                    <div>
+                        <img src="../img/logos/html.png" alt="HTML 5 Logo">
+                        
+                    </div>
+                </div>
+                <span id="structure"></span>
+                
+            </div>
+        </div>
+        <div class="container2">
+            <div class="box">
+                <h2>Page Structure</h2>
+                    <div class="boxImg imgex">
+                        <h4>Example of a HTML file layout</h4>
+                        <img  src="../img/examples/structure.png" alt="HTML Structure">
+                    </div>
+                    <div class="boxImg imgex">
+                        <h4>What it looks like</h4>
+                        <img src="../img/examples/structureex.png" alt="HTML Structure as Webpage">
+                        <div id="tags"></div>
+                    </div>
+            </div>
+            <div class="box">
+                <h2>HTML Tags</h2>
+                    <p>HTML tags are used to assign meaning to the page content. They are keywords described by the HTML standard and are designated by angle brackets. HTML tags are like keywords which define how the web browser will format and display the content.
+                        With the help of tags, a web browser can distinguish between different HTML content. HTML tags contain three main parts: opening tag, content and closing tag eg. There are exceptions to this though, as some HTML tags do not require
+                        a closing tag eg. &lt;br&gt; or &lt;img&gt; The current version of HTML is HTML 5</p>
+            
+                    <h4>Examples Of Tags</h4>
+                        <ul class="tags">
+                            <table class="tb">
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Use</th>
+                                </tr>
+                                <tr>
+                                    <td>&lt;! doctype html&gt;</td>
+                                    <td>Tells the browser that this page is in HTML</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;html lang=“en”&gt;</td>
+                                    <td>In a valid page all content must be placed inside this element</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;meta charset&gt;</td>
+                                    <td>Tells the browser what character set to use</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;title&gt;</td>
+                                    <td>Appears as the browser window or tab title, also displayed in search engine results</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;body&gt;</td>
+                                    <td>Content to be displayed in the browser window &lt;body&gt;</td>
+                                </tr>
+                            </table>
+                            <table class="tb">
+                                <h4>Block Elements</h4>
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Use</th>
+                                </tr>
+                                <tr>
+                                    <td>&lt;div></td>
+                                    <td>used as a container for HTML elements</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;p&gt;</td>
+                                    <td>paragraph &lt;/p&gt;</td>
+                                </tr>
+
+                                <tr>
+                                    <td>&lt;article></td>
+                                    <td>specifies independent, self-contained content.</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;aside></td>
+                                    <td>defines some content aside from the content it is placed in.</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;img&gt;</td>
+                                    <td>An Image - has a src attribute which is the source file for the image and alt for alternative text which will show instead, if the image isn't displayed eg. &lt;img src="photo.jpg" alt="This is an image"&gt;</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;video></td>
+                                    <td>used to embed video content in a document, such as a movie clip or other video streams.</td>
+                                </tr>
+                                
+                            </table>
+                            
+                            <table class="ts">
+                                <tr>
+                                    <th>Headings</th>
+                                    <th>Example</th>
+                                </tr>
+                                <tr>
+                                    <td class="exp">&lt;h1&gt; Heading 1 &lt;/h1&gt;</td>
+                                    <td><h1>HEADING 1</h1></td>
+
+                                </tr>
+                                <tr>
+                                    <td>&lt;h2&gt; Heading 2 &lt;/h2&gt;</td>
+                                    <td><h2>HEADING 2</h2></td>
+
+                                </tr>
+                                <tr>
+                                    <td>&lt;h3&gt; Heading 3 &lt;/h3&gt;</td>
+                                    <td><h3>HEADING 3</h3></td>
+
+                                </tr>
+                                <tr>
+                                    <td>&lt;h4&gt; Heading 4 &lt;/h4&gt;</td>
+                                    <td><h4>HEADING 4</h4></td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;h5&gt; Heading 5 &lt;/h5&gt;</td>
+                                    <td><h5>HEADING 5</h5></td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;h6&gt; Heading 6 &lt;/h6&gt;</td>
+                                    <td><h6>HEADING 6</h6></td>
+                                </tr>
+                            </table>
+                            <table class="ts">
+                                <h4>Inline Elements</h4>
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Use</th>
+                                </tr>
+                                <tr>
+                                    <td>&lt;a&gt;</td>
+                                    <td>the anchor tag is used to define Hyperlinks which open other pages or another part of the same page &lt;/a&gt;</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;br&gt;</td>
+                                    <td>line break - leave a vertical space between two pieces text</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;em&gt;</td>
+                                    <td><em>emphasis/italics -slants the text</em> &lt;/em&gt;</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;strong&gt;</td>
+                                    <td><strong>bolds the text</strong> &lt;/strong&gt;</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;Mark&gt;</td>
+                                    <td><Mark>mark the text</mark> &lt;/mark&gt;</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;sup></td>
+                                    <td>defines superscript <sup>text</sup>. Superscript text appears half a character above the normal line</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;sub></td>
+                                    <td>defines subscript <sub>text</sub>. Subscript text appears half a character below the normal line</td>
+                                </tr>
+                            </table>
+                        
+                        </ul >
+                    <a class="more" id="attributes" href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">Find More</a>   
+            </div>
+            <div class="box" >
+                <h2>HTML Attributes</h2>
+                    <h4>All HTML elements can have attributes</h4>
+                    <dl>
+                        <dd>Attributes provide additional information about elements</dd>
+                        <dd>Attributes are always specified in the start tag</dd>
+                        <dd>Attributes usually come in name/value pairs like: name="value"</dd>
+                    </dl>
+                    <dl>
+                        <dt>The href Attribute</dt>
+                        <dd>The &lt;a&gt; tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</dd>
+                        <dt>The src Attribute</dt>
+                        <dd>The &lt;img&gt; tag is used to embed an image in an HTML page. The src attribute 
+                            specifies the path to the image to be displayed:</dd>
+                        <dt>The width and height Attributes</dt>
+                        <dd>The &lt;img&gt; tag should also contain the width and height attributes, which specifies the width and height of the image (in pixels):</dd>
+                    </dl>
+                    <a class="more" id="links" href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">Find More</a>
+            </div>
+            <div class="box " >
+                <h2>HTML Links</h2>
+                    <dl>
+                        <dt>Absolute</dt>
+                        <dd>Full path is supplied to the page ie. <br>
+                            https://www.w3schools.com</dd>
+                        <dt>Relative</dt>
+                        <dd>A path that is relative to the document given </dd>
+                        <dd>/page.html - page is in the root directory<br> ./page.html - page is in the parent directory <br> ../page.html - page is in the current directory <br> ./otherpages/page.html - a subdirectory of the current page</dd>
+                    </dl>
+                    <a  id="lists" class="more" href="https://www.w3schools.com/html/html_links.asp" target="_blank">Find More</a>
+            </div>
+            <div class="box" >
+                <h2>HTML Lists</h2>
+                    <!-- Unordered lists -->
+                    <ul class="styledList">
+                        <li>An unordered list - achieved by using "ul" tags</li>
+                        <li>Each item on the list is achieved by coding "li" tags inside "ul" tags</li>
+                        <li>Useful if you don't need items to be listed in any order, like on a shopping list</li>
+                    </ul>
+                    <!-- Ordered List -->
+                    <ol class="styledOLList">
+                        <li>An ordered list - achieved by using "ol" tags</li>
+                        <li>Each item on the list is achieved by coding "li" tags inside "ol" tags</li>
+                        <li>Useful if items need to be listed in order and numbered, like dates or times</li>
+                    </ol>
+
+                    <!-- Definitive Lists -->
+                    <dl class="styledDLList">
+                        <dt>A detailed list - achieved by using "dl" tags</dt>
+                        <dd>Each item on the list is achieved by coding "dt" tags inside "dl" tags <br> The detail/definition for each item is achieved by coding "dd" tags underneath "dt" tags</dd>
+                        <dt style="border: 0;">Useful for:</dt>
+                        <dd>Lists that have more than one level of information or with items that have individual characteristics</dd>
+                    </dl>
+                    <a id="tables" class="more" href="https://www.w3schools.com/html/html_iframe.asp" target="_blank">Find More</a>
+            </div>
+            <div class="box" >
+                <h2>HTML Tables</h2>
+                    <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+                        <dl>
+                            <dt>Defining a table</dt>
+                            <dd>&lt;table>&lt;/table></dd>
+                            <dt>Table rows</dt>
+                            <dd>&lt;tr>&lt;/tr></dd>
+                            <dt>Table heading</dt>
+                            <dd>&lt;th>&lt;/th></dd>
+                            <dt>Table cell</dt>
+                            <dd>&lt;td>&lt;/td></dd>
+                        </dl>
+                        <div class="flexBox">
+                            <dl class="flexItem">
+                                <dt class="exp">Example</dt>
+                                <dd>&lt;table></dd>
+                                <dd class="indent">&lt;tr></dd>
+                                <dd class="indent2">&lt;th>Name&lt;/th></dd>
+                                <dd class="indent2">&lt;th>Age&lt;/th></dd>
+                                <dd class="indent">&lt;/tr></dd>
+                                <dd class="indent">&lt;tr></dd>
+                                <dd class="indent2">&lt;td>Ahmad&lt;/td></dd>
+                                <dd class="indent2">&lt;td>22&lt;/td></dd>
+                                <dd class="indent">&lt;/tr></dd>
+                                <dd class="indent">&lt;tr></dd>
+                                <dd class="indent2">&lt;td>Amine&lt;/td></dd>
+                                <dd class="indent2">&lt;td>21&lt;/td></dd>
+                                <dd class="indent">&lt;/tr></dd>
+                                <dd>&lt;/table></dd>
+                            </dl>
+                            <div class="flexItem" >
+                                <h3>Result</h3>
+                                <table class="tableEx">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Age</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Ahmad</td>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amine</td>
+                                        <td>21</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    <span id="forms"></span>
+            </div>
+            <div class="box">
+                <h2>Forms</h2>
+                    <p>Forms are for users to fill in information on a website. This can be a username & password, a complaint or online surveys/forms. They consist of a label & an input.</p>
+                    <dl>
+                        <dt>Label</dt>
+                        <dd>The label is the for where the information is entered eg "Password: "</dd>
+                        <dd>Should be displayed to the left or above the input</dd>
+                        <dt>Input</dt>
+                        <dd>The input is where the user fills in the information, either by typing it in or selecting an option</dd>
+                    </dl>
+                    <h4>Example of from</h4>
+                    <div class="boxImg imgex">
+                        <img src="../img/examples/Form.png" alt="Example of a HTML Form">
+                    </div>
+                    <h4>what it looks like</h4>
+                    <div class="boxImg imgex">
+                        <img src="../img/examples/formex.png" alt="">
+                    </div>
+                    <div>
+                        <p>There are many types of input. The usual is "text", where the user inputs some text, by filling in the box provided. There is also radio, checkbox, button, email, submit, reset and many more.</p>
+                    </div>
+                    <a id="iframe" class="more" href="https://www.w3schools.com/html/html_forms.asp" target="_blank">Find More</a>
+            </div>
+            <div class="box" >
+                <h2>HTML Iframe</h2>
+                    <dl>
+                        <dd>An HTML iframe is used to display a web page within a web page.</dd>
+                        <dt>HTML Iframe Syntax</dt>
+                        <dd>The HTML &lt;iframe&gt; tag specifies an inline frame.</dd>
+                        <dd>An inline frame is used to embed another document within the current HTML document.</dd>
+                        <dt class="exp">Syntax</dt>
+                        <dd>The &lt;iframe src="url" title="description"&gt;&lt;/iframe&gt;</dd>
+                        <dt>Iframe - Set Height and Width</dt>
+                        <dd>Use the height and width attributes to specify the size of the iframe.</dd>
+                        <dd>The height and width are specified in pixels by default:</dd>
+                        <dt class="exp">Example</dt>
+                        <dd>&lt;iframe src="../index.html" height="500" width="80%" title="description"&gt;&lt;/iframe&gt;</dd>
+                    </dl>
+                    <h3>Result</h3>
+                    <iframe style="display: block; margin: 20px auto;" src="../index.html" height="500px" width="80%" title="description"></iframe>
+                    <a class="more" href="https://www.w3schools.com/html/html_iframe.asp" target="_blank">Find More</a>
+                    
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

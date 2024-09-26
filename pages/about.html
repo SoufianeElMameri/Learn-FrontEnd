@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnStatic</title>
+    <link rel="icon" type="image/x-icon" href="../img/logos/logo.png">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <script src="https://kit.fontawesome.com/c96d3426c0.js" crossorigin="anonymous"></script>
+</head>
+<body id="top">
+    <script>
+        drops = 1;
+        test = 1;
+        function slidein(){
+            if (test == 1){
+                document.getElementById('nav').style.left = "0";
+                document.getElementById('rightArrow').style.animation = "none"
+                document.getElementById('rightArrow').style.transform = "rotate(180deg)"
+                document.getElementById('rightArrow').style.right = "0"
+                test = 0;
+            }else{
+                document.getElementById('nav').style.left = "-250px";
+                document.getElementById('rightArrow').style.transform = "rotate(0deg)"
+                document.getElementById('rightArrow').style.right = "-60px"
+                test = 1;
+            }
+        }
+        function drop(){
+            if (drops == 1){ 
+                document.getElementById('phoneOut').style.top = "0";
+                document.getElementById('container').style.padding = "50px 10px"
+                drops = 0;
+            }
+            else{ 
+                document.getElementById('phoneOut').style.top = "98px";
+                document.getElementById('container').style.padding = "150px 10px"
+                drops = 1;
+            }
+        }
+        function load(){
+            document.getElementById('firstBox').style.opacity = "100%";
+        }
+        addEventListener("load" , load);
+
+    </script>
+    <header>
+        <div class="logo">
+            <img src="../img/logos/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="pc">
+                <li><a href="../index.html">Home <span></span> </a></li>
+                <li><a href="html.html">Html <span></span></a></li>
+                <li><a href="css.html">Css <span></span></a></li>
+                <li><a href="userInterface.html">User-Interface <span></span></a></li>
+                <li><a href="userExperience.html">User-Experience <span></span></a></li>
+                <li><a href="about.html">About<span></span></a></li>
+            </ul>
+            <ul class="phoneIn phone">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span style="left: 15px;">HOME</span></a></li>
+                <li onclick="drop()"><i class="fa-solid fa-bars" style="color: white;"></i><span style="top: -20px;">NAV</span></li>              
+            </ul>
+        </nav>
+        <nav class="phone" id="phoneOut">
+            <ul>
+                <li><a href="html.html"><i class="fa-brands fa-html5"></i><span>HTML</span></a></li>
+                <li><a href="css.html"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></a></li>
+                <li><a href="userInterface.html"><i class="fa-solid fa-user-gear"></i><span>UI</span></a></li>
+                <li><a href="userExperience.html"><i class="fa-solid fa-user-check"></i><span>UX</span></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i><span>ABOUT</span></a></li>   
+            </ul>
+        </nav>
+        <div class="logo" >
+            <a href="#top"><i class="fa-solid fa-angles-right" ></i></a>
+        </div>
+    </header>
+    <main>
+        <a id="feedback" href="feedback.html"><i class="fa-solid fa-pen-to-square"></i> FeedBack</a>
+        <div id="container">
+            <div id="firstBox">
+                <h2>About me <i class="fa-solid fa-user"></i></h2>
+                <div class="secBoxContent">
+                    <ol>
+                        <h3>Hi! My name is Soufiane El Mameri.</h3>
+                        <p class="me">I'm a 22 years old Web Developer. <br> Currently studying IT development at CFHN, I've been web developing for the past 2 years, during this peroid i have acquired many programing skills, you can see them below.</p>
+                        <dl class="mylangs">
+                            <dt class="border">Skills</dt>
+                            <dd class="html" > <span>HTML <i class="fab fa-html5"></i></span><div class="lvl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div></dd>
+                            <dd class="css"> <span>CSS <i class="fab fa-css3-alt"></i></span> <div class="lvl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div></dd>
+                            <dd class="js"> <span>JavaScript <i class="fab fa-js"></i></span> <div class="lvl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div></dd>
+                            <dd class="react"> <span>React <i class="fab fa-react"></i></span> <div class="lvl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div></dd>
+                            <dd class="php"> <span>Php <i class="fab fa-php"></i></span> <div class="lvl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div></dd>
+                            <dd class="py"> <span>Python <i class="fa-brands fa-python"></i></span> <div class="lvl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div></dd>
+                        </dl>
+                    </ol>
+                    <div style="padding: 30px;">
+                        <img src="../img/logos/aboutme.png" alt="User Experience">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

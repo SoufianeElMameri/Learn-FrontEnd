@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnStatic</title>
+    <link rel="icon" type="image/x-icon" href="../img/logos/logo.png">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <script src="https://kit.fontawesome.com/c96d3426c0.js" crossorigin="anonymous"></script>
+</head>
+<body id="top">
+    <script>
+        drops = 1;
+        test = 1;
+        function slidein(){
+            if (test == 1){
+                document.getElementById('nav').style.left = "0";
+                document.getElementById('rightArrow').style.animation = "none"
+                document.getElementById('rightArrow').style.transform = "rotate(180deg) translateY(-45%)"
+                document.getElementById('rightArrow').style.right = "0"
+                document.getElementById('rightArrow').style.color = "white"
+                test = 0;
+            }else{
+                document.getElementById('nav').style.left = "-250px";
+                document.getElementById('rightArrow').style.transform = "rotate(0deg)"
+                document.getElementById('rightArrow').style.right = "-50px"
+                document.getElementById('rightArrow').style.color = "black"
+                test = 1;
+            }
+        }
+        function drop(){
+            if (drops == 1){ 
+                document.getElementById('phoneOut').style.top = "0";
+                document.getElementById('container').style.padding = "50px 10px"
+                drops = 0;
+            }
+            else{ 
+                document.getElementById('phoneOut').style.top = "98px";
+                document.getElementById('container').style.padding = "150px 10px"
+                drops = 1;
+            }
+        }
+        function load(){
+            document.getElementById('firstBox').style.opacity = "100%";
+        }
+        addEventListener("load" , load);
+    </script>
+    <header>
+        <div class="logo">
+            <img src="../img/logos/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="pc">
+                <li><a href="../index.html">Home <span></span> </a></li>
+                <li><a href="html.html">Html <span></span></a></li>
+                <li><a href="css.html">Css <span></span></a></li>
+                <li><a href="userInterface.html">User-Interface <span></span></a></li>
+                <li><a href="userExperience.html">User-Experience <span></span></a></li>
+                <li><a href="about.html">About <span></span></a></li>
+            </ul>
+            <ul class="phoneIn phone">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span style="left: 15px;">HOME</span></a></li>
+                <li onclick="drop()"><i class="fa-solid fa-bars" style="color: white;"></i><span style="top: -20px;">NAV</span></li>              
+            </ul>
+        </nav>
+        <nav class="phone" id="phoneOut">
+            <ul>
+                <li><a href="html.html"><i class="fa-brands fa-html5"></i><span>HTML</span></a></li>
+                <li><a href="css.html"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></a></li>
+                <li><a href="userInterface.html"><i class="fa-solid fa-user-gear"></i><span>UI</span></a></li>
+                <li><a href="userExperience.html"><i class="fa-solid fa-user-check"></i><span>UX</span></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i><span>ABOUT</span></a></li>    
+            </ul>
+        </nav>
+        <div class="logo" >
+            <a href="#top"><i class="fa-solid fa-angles-right" ></i></a>
+        </div>
+    </header>
+    <main>
+        <a id="feedback" href="feedback.html"><i class="fa-solid fa-pen-to-square"></i> FeedBack</a>
+        <nav id="nav">
+            <ul class="cssNav">
+                <li onclick="slidein()"><a href="#syn">CSS Syntax</a></li>
+                <li onclick="slidein()"><a href="#select">CSS Selectors</a></li>
+                <li onclick="slidein()"><a href="#how">CSS how to</a></li>
+                <li onclick="slidein()"><a href="#attrib">CSS Attributes</a></li>
+                <li onclick="slidein()"><a href="#grid">CSS Grid</a></li>
+                <li onclick="slidein()"><a href="#flex">CSS Flex</a></li>
+                <li onclick="slidein()"><a href="#transit">CSS Transitions</a></li>
+                <li onclick="slidein()"><a href="#anime">CSS Animations</a></li>
+                <li onclick="slidein()"><a href="#respons">CSS Responsive</a></li>
+                <li onclick="slidein()"><a href="https://www.w3schools.com/css/default.asp" target="_Blank">FULL Tutorial </a></li>
+                <div><i id="rightArrow" onclick="slidein()" class="fa-solid fa-angles-right"></i></div>
+            </ul>
+        </nav>
+        <div id="container">
+            <div id="firstBox">
+                <h2>Cascading Style Sheets <i class="fa-brands fa-css3-alt"></i></h2>
+                <div class="secBoxContent">
+                    <ol>
+                        <li class="liTitle">Giving Web Pages Structure & Layout</li>
+                        <p>Web pages are written using a coding language called Hyper Text MarkUp Language (HTML), using elements. This provides the content & structure for the page such as the words you are reading right now. (See more on the <a href="html.html">HTML page</a>)</p>
+                        <li>The coding language Cascading Style Sheets (CSS, currently the 3rd version, CSS 3) is used to style the elements & control the layout of web pages. This can be anything from where things are on a webpage to their size, shape and colour.
+                        </li>     
+                        <li class="liTitle">CSS Examples</li>
+                        <p>Learn from over 300 examples! With w3schools editor, you can edit the CSS, and click on a button to view the result.</p>
+                        <a class="more" id="syn" href="https://www.w3schools.com/css/css_examples.asp" target="_blank">Go to CSS Examples!</a>
+                        
+                    </ol>
+                    <div>
+                        <img src="../img/logos/css.png" alt="css 3 Logo">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container2">
+            <div class="box">
+                <h2>CSS Syntax</h2>
+                <div class="boxContent">
+                    <div class="boxImg">
+                        <img src="../img/examples/cssSyn.gif" alt="CSS Syntax">
+                    </div>
+                    <p>The selector points to the HTML element you want to style.</p>
+                    <p>The declaration block contains one or more declarations separated by semicolons.</p>
+                        
+                    <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+                        
+                    <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+                    <dl>
+                        <dt class="exp">Example</dt>
+                        <dd>p {
+                            color: red;
+                            text-align: center;
+                        }</dd>
+                        <dt class="exp" >Results</dt>
+                        <dd style="color:red; text-align: center;">These paragraphs are styled with CSS.</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Adding Style & Colour to Web Pages</h2>
+                <div class="boxContent">
+                    <h4>Be careful when using CSS to design your webpage!</h4>
+                    <p>A fine balance between usability and looks is needed when styling a website. The cleaner and less cluttered a page, the better. The user must always be considered first. Sometimes keeping it clean is not the biggest priority eg.if a user
+                        is visiting the website purely for content or information. For more information on deciding how to design your layout, see the <a href="user_experience.html">User Experience page</a></p>
+                    <p >In order to brighten it up and make individual features more noticeable, a variety of colours are used on a website. Care must be taken when choosing which & how many colours to use. Too few or not contrasting enough and a web page blends
+                        together, with individual features getting lost in the blend. Too many or <span id="select"></span> too contrasting and the user is overwhelmed, with too much going on for their eyes to handle.
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 id="Selectors">Selectors - Styling Individual Parts of a Webpage</h2>
+                <div class="boxContent">
+                        <h4>Element Selectors</h4>
+                        <p>Any HTML element can be given its own style. Element selectors are used to style every instance of a certain element on the website. They give the website a familiar design. When every page on a website is styled in a similar fashion,
+                            the user can navigate more easily. It also improves the user experience, with usability and individual functions clear and obvious.</p>
+                        <p>The element selector is coded in the CSS file as "<em>element</em>{&nbsp&nbsp&nbsp}" with the design features coded inside the curly brackets. Each element can have it's own design features.</p>
+                        <dl>
+                            <dt class="exp">Examples</dt>
+                            <dd>h1, h2, h3, h4, h5, h6 (headings)</dd>
+                            <dd>body &nbsp;&nbsp;&nbsp;(entire web page body)</dd>
+                            <dd>nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(navigation bar)</dd>
+                            <dd>a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(links)</dd>
+                            <dd>img &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(images)</dd>
+                            <dd>footer &nbsp;&nbsp;(bottom of webpage)</dd>
+
+                        </dl>
+                        <p> For more information on using HTML elements, see the <a href="HTML.html">HTML page</a>
+                        </p>
+                        <h4>Pseudo-element Selectors</h4>
+                        <p>If a HTML element contains other HTML elements (called pseudo-elements), they can also be given their own style. Pseudo-element selectors allow the styling of every instance of a pseudo-element, without effecting other instances of
+                            the same element on the page. They can go several layers deep into the pseudo-elements.</p>
+                        <dl>
+                            <dt class="exp">Examples</dt>
+                            <dd>nav { }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; navigation bar</dd>
+                            <dd>nav ul { } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nav unordered list</dd>
+                            <dd>nav ul li { } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nav ul list item</dd>
+                            <dd>nav ul li a { } &nbsp;&nbsp;&nbsp;&nbsp; nav ul li link</dd>
+                        </dl>
+                        <h4>Other Selectors - Id vs Class</h4>
+                        <p>Non-element selectors are used to style different parts of the web page in a unique way. They are applied when coded in the CSS file and attached to an individual part of a web page by being coded inside the tag on the HTML file. There
+                            are two types of non-element selectors:</p>
+                        <dl>
+                            <dt>Id</dt>
+                            <dd>Id Selectors are used to style individual parts of the webpage uniquely. They are defined using " # {&nbsp&nbsp&nbsp} "</dd>
+                            <dd>They are configured inside the tag of the HTML element, using " id="<em>id name</em>" "</dd>
+                            <dt>Class</dt>
+                            <dd>Classes are defined using " .{&nbsp&nbsp&nbsp} " with the design features coded between the curly brackets</dd>
+                            <dd>They are configured inside the tag of the HTML element, using " class="<em>class name</em>" "</dd>
+                        </dl>
+                        <h4>Pseudo-class Selectors</h4>
+                        <p>A pseudo-class is used to define a special state of an element. It means an element can change colour or size when in certain states, such as being hovered over. </p>
+                        <dl>
+                            <dt class="exp">Examples</dt>
+                            <dd>nav a { }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; navigation bar link</dd>
+                            <dd>nav a:hover { } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nav link when hovered over</dd>
+                            <dd>nav a:visited { } &nbsp;&nbsp;&nbsp;&nbsp; nav link when visited(previously clicked)</dd>
+                        </dl>
+                        <a id="how" class="more" href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">List Of All Selectors</a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Ways to Insert CSS</h2>
+                <div class="boxContent">
+                    <h4>There are three ways of inserting a style sheet</h4>
+                    <dl>
+                        <dt>External CSS</dt>
+                        <dd>With an external style sheet, you can change the look of an entire website by changing just one file!</dd>
+                        <dd>Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element, inside the head section.</dd>
+                        <dd>An external style sheet can be written in any text editor, and must be saved with a .css extension.</dd>
+                        <dd>The external .css file should not contain any HTML tags.</dd>
+                        <dt style="border: 0;" class="exp">Link Example</dt>
+                        <dd>&lt;link rel="stylesheet" href="mystyle.css"></dd>
+                        <dt>Here is how the "mystyle.css" file looks:</dt>
+                        <dd>body {
+                            background-color: lightblue;
+                        }<br>
+                        
+                        h1 {
+                            color: navy;
+                            margin-left: 20px;
+                        }</dd>
+                    </dl>
+                    <div class="flexBox">
+                        <dl class="flexItem">
+                            <dt class="border">Internal CSS</dt>
+                            <dd>An internal style sheet may be used if one single HTML page has a unique style.</dd>
+                            <dd>The internal style is defined inside the &lt;style> element, inside the head section.</dd>
+                            <br>
+                            <dt class="border">Internal css Example</dt>
+                            <dd><div class="boxImg"><img src="../img/examples/internalcss.png" alt=""></div></dd>
+                        </dl>
+                        <dl class="flexItem">
+                            <dt class="border">Inline CSS</dt>
+                            <dd>An inline style may be used to apply a unique style for a single element.</dd>
+
+                            <dd>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</dd>
+                            <dt class="border">Inline Css Example</dt>
+                            <dd><div class="boxImg"><img src="../img/examples/inlinecss.png" alt=""></div></dd>
+                        </dl>
+                    </div>
+                    <h4>Cascading - Precedence</h4>
+                        <p id="attrib" >The order of your selectors is important. CSS is cascading - This means the CSS file is read from top to bottom when being configureded. It doesn't effect everything but it's a good idea to get into the habit of putting your selectors
+                            in the correct order. As you will see in the responsive design section, it can make a big difference.</p>
+                </div>
+            </div> 
+
+            <div class="box">
+                <h2 >Attributes</h2>
+                <div class="boxContent">
+                    <p>There are many ways to define a selector They are defined using "<em>selector</em>{<em>attribute</em>:<em>attribute detail</em>;}". Each attribute will effect the selector in a different way. You can change the colour, background colour,
+                        size, font used, space around, space between it and other items, and how it is displayed on the webpage. There are too many attributes to list them all here. However there are a few that you will constantly use:</p>         
+                    <p>There are many ways to define a selector They are defined using "<em>selector</em>{<em>attribute</em>:<em>attribute detail</em>;}". Each attribute will effect the selector in a different way. You can change the colour, background colour,
+                            size, font used, space around, space between it and other items, and how it is displayed on the webpage. There are too many attributes to list them all here. However there are a few that you will constantly use:</p>
+                    <div class="flexBox border">
+                        <ul class="flexItem">
+                            <li>Margin</li>
+                            <li>Border</li>
+                            <li>Padding</li>
+                            <li>Width, height</li>
+                            <li>Display</li>
+                            <li>Color, background-color</li>
+                            <li>Font-family, font-size, font-weight</li>
+                        </ul>
+                        <div class="boxImg flexItem">
+                            <img style="width: 200px;" src="../img/examples/spaces.png" alt="">
+                        </div>
+                    </div>
+                    <p>Padding is the space between the content and the border, whereas margin is the space outside the border.</p>
+                    <a id="grid" class="more" href="https://www.w3schools.com/css/css_examples.asp" target="_blank">Find More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>CSS Grid</h2>
+                <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+                <h4>Grid Properties</h4>
+                <table class="tb" style="width: 80%;">
+                    <tr>
+                        <th>properties</th>
+                        <th>Use</th>
+                    </tr>
+                    <tr>
+                        <td>Display Property</td>
+                        <td>An HTML element becomes a grid container when its display property is set to grid or inline-grid.</td>
+                    </tr>
+                    <tr>
+                        <td>column-gap/row-gap/gap</td>
+                        <td>You can adjust the gap size by using one of this properties:</td>
+                    </tr>
+                    <tr>
+                        <td>grid-template-columns</td>
+                        <td>Specifies the size of the columns, and how many columns in a grid layout</td>
+                    </tr>
+                    <tr>
+                        <td>grid-template-rows</td>
+                        <td>Specifies the size of the rows in a grid layout</td>
+                    </tr>
+                    <tr>
+                        <td>grid-column-start / grid-column-end</td>
+                        <td>Specifies where to start or end the grid item</td>
+                    </tr>
+                </table>
+                <h4>Grid Elements</h4>
+                <p>A grid layout consists of a parent element, with one or more child elements.</p>
+                <div class="flexBox">
+                    <dl class="flexItem">
+                        <dt class="exp">Example</dt>
+                        <dd>&lt;div class="grid-container"></dd>
+                        <dd class="indent">&lt;div class="grid-item">1&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">2&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">3&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">4&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">5&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">6&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">7&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">8&lt;/div></dd>
+                        <dd class="indent">&lt;div class="grid-item">9&lt;/div></dd>
+                        <dd>&lt;/div></dd>
+                    </dl>
+                    <div class="flexItem">
+                        <h3>Results</h3>
+                        <div class="grid-container">
+                            <div class="grid-item">1</div>
+                            <div class="grid-item">2</div>
+                            <div class="grid-item">3</div>
+                            <div class="grid-item">4</div>
+                            <div class="grid-item">5</div>
+                            <div class="grid-item">6</div>
+                            <div class="grid-item">7</div>
+                            <div class="grid-item">8</div>
+                            <div class="grid-item">9</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexBox">
+                    <dl class="flexItem">
+                        <dt class="border exp">grid-container CSS</dt>
+                        <dd>display: grid;</dd>
+                        <dd>grid-template-columns: auto auto auto;</dd>
+                        <dd>background-color: #2196F3;</dd>
+                        <dd>padding: 10px;</dd>
+                    </dl>
+                    <dl class="flexItem">
+                        <dt class="border exp">grid-item CSS</dt>
+                        <dd>background-color: rgba(255, 255, 255, 0.8);</dd>
+                        <dd>text-align: center;</dd>
+                        <dd>padding: 20px 0;</dd>
+                        <dd>font-size: 30px;</dd>
+                    </dl>
+                </div>
+                <a id="flex" class="more" href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">Find More</a>
+            </div>
+            <div class="box">
+                <h2>CSS Flexbox</h2>
+                <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+                <h4>Flex Container Properties</h4>
+                <table class="tb" style="width: 80%;">
+                    <tr>
+                        <th>properties</th>
+                        <th>Use</th>
+                    </tr>
+                    <tr>
+                        <td>Display Property</td>
+                        <td>An HTML element becomes flexible by setting the display property to flex.</td>
+                    </tr>
+                    <tr>
+                        <td>flex-direction</td>
+                        <td>Specifies the direction of the flexible items inside a flex container.</td>
+                    </tr>
+                    <tr>
+                        <td>flex-flow</td>
+                        <td>A shorthand property for flex-direction and flex-wrap</td>
+                    </tr>
+                    <tr>
+                        <td>flex-wrap</td>
+                        <td>Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line</td>
+                    </tr>
+                    <tr>
+                        <td>justify-content</td>
+                        <td>Horizontally aligns the flex items when the items do not use all available space on the main-axis</td>
+                    </tr>
+                    <tr>
+                        <td>align-items</td>
+                        <td>Vertically aligns the flex items when the items do not use all available space on the cross-axis</td>
+                    </tr>
+                </table>
+                <h4>Flex Items Properties</h4>
+                <table class="tb" style="width: 80%;">
+                    <tr>
+                        <th>properties</th>
+                        <th>Use</th>
+                    </tr>
+                    <tr>
+                        <td>align-self</td>
+                        <td>Specifies the alignment for a flex item.</td>
+                    </tr>
+                    <tr>
+                        <td>flex</td>
+                        <td>A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties.</td>
+                    </tr>
+                    <tr>
+                        <td>flex-flow</td>
+                        <td>A shorthand property for flex-direction and flex-wrap</td>
+                    </tr>
+                    <tr>
+                        <td>flex-basis</td>
+                        <td>Specifies the initial length of a flex item</td>
+                    </tr>
+                    <tr>
+                        <td>flex-grow / flex-shrink</td>
+                        <td>Specifies how much a flex item will grow or shrink relative to the rest of the flex items inside the same container</td>
+                    </tr>
+                    <tr>
+                        <td>order</td>
+                        <td>Specifies the order of the flex items inside the same container</td>
+                    </tr>
+                </table>
+                <div class="flexBox">
+                    <dl class="flexItem" >
+                        <dt class="exp">Example</dt>
+                        <dd style="margin-top: 50px;">&lt;div class="flex-container"></dd>
+                        <dd class="indent">&lt;div class="flex-item">1&lt;/div></dd>
+                        <dd class="indent">&lt;div class="flex-item">2&lt;/div></dd>
+                        <dd class="indent">&lt;div class="flex-item">3&lt;/div></dd>
+                        <dd class="indent">&lt;div class="flex-item">4&lt;/div></dd>
+                        <dd class="indent">&lt;div class="flex-item">5&lt;/div></dd>
+                        <dd class="indent">&lt;div class="flex-item">6&lt;/div></dd>
+                        <dd>&lt;/div></dd>
+                    </dl>
+                    <div class="flexItem">
+                        <h3>Results with Wrap</h3>
+                        <div style="position: relative; width: fit-content;">
+                            <div class="flex-container">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                                <div class="flex-item">4</div>
+                                <div class="flex-item">5</div>
+                                <div class="flex-item">6</div>
+                            </div>
+                            <sub>resize <i class="fa-solid fa-arrow-pointer"></i></sub>
+                        </div>
+                        <h3>Results with nowrap</h3>
+                        <div style="position: relative; width: fit-content;">
+                            <div class="flex-container exp2">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                                <div class="flex-item">4</div>
+                                <div class="flex-item">5</div>
+                                <div class="flex-item">6</div>
+                            </div>
+                            <sub>resize <i class="fa-solid fa-arrow-pointer"></i></sub>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexBox">
+                    <dl class="flexItem">
+                        <dt class="border exp">flex-container CSS</dt>
+                        <dd>display: flex;</dd>
+                        <dd>flex-wrap: wrap; / flex-wrap: nowrap;</dd>
+                        <dd>background-color: #2196F3;</dd>
+                        <dd>margin-left: 50px;</dd>
+                        <dd>padding : 5px</dd>
+                        <dd>align-items: center;</dd>
+                    </dl>
+                    <dl class="flexItem">
+                        <dt class="border exp">flex-item CSS</dt>
+                        <dd>background-color: rgba(255, 255, 255, 0.8);</dd>
+                        <dd>text-align: center;</dd>
+                        <dd>width: 50px;</dd>
+                        <dd>margin: 5px 10px;</dd>
+                        <dd>font-size: 30px;</dd>
+                        <dd>line-height: 75px;</dd>
+                    </dl>
+                </div>
+                <a id="transit" class="more" href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">Find More</a>
+            </div>
+            <div class="box">
+                <h2>CSS Transitions & Animations</h2>
+                <div class="boxContent flexBox">
+                    <div class="flexItem">
+                        <h4>Css Transitions</h4>
+                        <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+                        <dl>
+                            <dt class="exp">Box without a transition</dt>
+                            <dd class="hoverTest">Hover me!</dd>
+                        </dl>
+                        <dl>
+                            <dt class="exp">Box with a transition</dt>
+                            <dd class="hoverTest2">Hover me!</dd>
+                        </dl>
+                    
+                    </div>
+                    <div class="flexItem">
+                        <h4>Transitions properties</h4>
+                        <dl>
+                            <dt>transition-property</dt>
+                            <dd>the CSS property you want to add an effect to</dd>
+                            <dt>transition-delay</dt>
+                            <dd>the delay before the effect starts</dd>
+                            <dt>transition-duration</dt>
+                            <dd>the duration of the effect</dd>
+                            <dt>transition-timing-function</dt>
+                            <dd>specifies the speed curve of the transition effect.</dd>
+                            <dt id="anime" class="exp">Example</dt>
+                            <dd>div {</dd>
+                            <dd class="indent">transition: width 2s linear 1s;</dd>
+                            <dd>}</dd>
+                        </dl>
+                    </div>
+
+                </div>
+                <div class="boxContent flexBox">
+                    <div class="flexItem">
+                        <h4>Css Animations</h4>
+                        <p>CSS allows animation of HTML elements without using JavaScript or Flash!</p>
+                        <dl>
+                            <dt>Box with an animation</dt>
+                            <dd class="animated">woaaah!</dd>
+                            <dt>What are CSS Animations?</dt>
+                            <dd>An animation lets an element gradually change from one style to another.</dd>
+                            <dd>You can change as many CSS properties you want, as many times as you want.</dd>
+                            <dd>To use CSS animation, you must first specify some keyframes for the animation.</dd>
+                            <dd>Keyframes hold what styles the element will have at certain times.</dd>
+                    
+                            <dt>The @keyframes Rule</dt>
+                            <dd>When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.</dd>
+                            <dd>To get an animation to work, you must bind the animation to an element.</dd>
+                            <dt class="exp">Example</dt>
+                            <dd>@keyframe example{</dd>
+                            <dd class="indent">from {background-color: red;}</dd>
+                            <dd class="indent">to {background-color: yellow;}</dd>
+                            <dd>}</dd>
+                        </dl>
+                    </div>
+                    <div class="flexItem">
+                        <h4>Animation properties</h4>
+                        <dl>
+                            <dt>Animation-name</dt>
+                            <dd>the name you gave to the @keyframe(Animation).</dd>
+                            <dt>Animation-duration</dt>
+                            <dd>the duration of the animation.</dd>
+                            <dt>Animation delay</dt>
+                            <dd>the delay before the animation starts.</dd>
+                            <dt>Animation-iteration-count</dt>
+                            <dd>the number of times an animation should run.</dd>
+                            <dt>Animation-direction</dt>
+                            <dd>specifies whether an animation should be played forwards, backwards or in alternate cycles.</dd>
+                            <dt>Animation-timing-function</dt>
+                            <dd>specifies the speed curve of the animation(ease, ease-in, ease-out...).</dd>
+                            <dt>Animation-fill-mode</dt>
+                            <dd>specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).</dd>
+                            <dt class="exp">Example</dt>
+                            <dd>div {</dd>
+                            <dd class="indent">animation: example 5s linear 2s infinite alternate;</dd>    
+                            <dd >}</dd>
+                        </dl>
+                    </div>
+
+                </div>
+                <br>
+                <a  class="more" href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">Find More About Transitions</a>
+                <br>
+                <a id="respons" class="more" href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">Find More About Animations</a>
+            </div>
+            <div class="box">
+                <h2 id="Responsive">Responsive Design - Designing For All Devices</h2>
+                <div class="boxContent flexBox">
+                    <div class="boxTextLeft flexItem">
+                        <h4>What is Responsive Design?</h4>
+                        <p>There are too many different screen sizes these days to accommodate for all devices.</p>
+                        <p>Responsive Design is coding the CSS file for your web pages to respond to varying screen sizes and devices. It can be used to adjust other items on the page as well, such as image resolution and layout. Depending which device or what
+                            screen size your web page is dealing with, it will adapt to suit the available area. No matter what device your user is browsing your website on, the webpage will be just as easy to navigate.</p>
+                        <p>Most website designers focus on a few key sizes for the adjustments to occur. These are measured by screen width (px = pixels) and are as follows: </p>
+
+                    </div>
+                    <div class="flexItem">
+                        <ul style="display: block;list-style-type: disc; margin: 20px 100px; width: fit-content;">
+                            <li>320px</li>
+                            <li>480px</li>
+                            <li>600px</li>
+                            <li>768px</li>
+                            <li>900px</li>
+                            <li>1200px</li>
+                        </ul>
+                        <img style="display: block; margin: 30px auto; width: 400px;" src="../img/examples/responsive.jpg" alt="Varying Screen Sizes">
+                    </div>
+                </div>
+                <div class="boxContent">
+                        <h4>Coding Responsive Design</h4>
+                        <p>To code responsive design, at the end of the CSS file you add rules for the page to follow when it is between certain widths. You adjust the selectors inside "media only screen and (<em>width</em>){&nbsp&nbsp&nbsp}". You can work in
+                            one of two directions. It will depend on your user base and who you are trying to appeal to and what the website will be used for. The order is important, as you must work from one end of the scale to the other, for the CSS to
+                            be implemented with each screen-width change.</p>
+                        <dl>
+                            <dt class="exp border">Media Query Syntax</dt>
+                            <dd>@media not|only mediatype and (expressions) {</dd>
+                            <dd class="indent">CSS-Code;</dd>
+                            <dd>}</dd>
+                            <dt>Example</dt>
+                            <dd>@media screen and (min-width: 480px) {</dd>
+                            <dd class="indent"> body { </dd>
+                            <dd class="indent2"> background-color: lightgreen;</dd>
+                            <dd class="indent">} </dd>
+                            <dd>}</dd>
+                        </dl>
+                        <ol>
+                            <li>Start at mobile phone size and work your way towards larger screen sizes</li>
+                            <ul>
+                                <li>This is more common as everyone has a mobile phone but not everyone has a computer. In some countries almost all internet usage is through mobile phones so it makes more sense in these places. (Use "min-width:...px")</li>
+                            </ul>
+                            <li>Start at a large monitor size and work your way towards smaller screen sizes</li>
+                            <ul>
+                                <li>More common for business-oriented websites. Used when designing for a user who is mainly going to access your website on a PC or laptop. Bigger size screens get priority. (Use max-width:...px, as shown in the image)</li>
+                            </ul>
+                        </ol>
+                </div>
+                <a class="more" href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp" target="_blank">Find More</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

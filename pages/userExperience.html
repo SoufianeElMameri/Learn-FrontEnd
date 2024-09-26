@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnStatic</title>
+    <link rel="icon" type="image/x-icon" href="../img/logos/logo.png">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <script src="https://kit.fontawesome.com/c96d3426c0.js" crossorigin="anonymous"></script>
+</head>
+<body id="top">
+    <script>
+        drops = 1;
+        test = 1;
+        function slidein(){
+            if (test == 1){
+                document.getElementById('nav').style.left = "0";
+                document.getElementById('rightArrow').style.animation = "none"
+                document.getElementById('rightArrow').style.transform = "rotate(180deg)"
+                document.getElementById('rightArrow').style.right = "0"
+                test = 0;
+            }else{
+                document.getElementById('nav').style.left = "-250px";
+                document.getElementById('rightArrow').style.transform = "rotate(0deg)"
+                document.getElementById('rightArrow').style.right = "-60px"
+                test = 1;
+            }
+        }
+        function drop(){
+            if (drops == 1){ 
+                document.getElementById('phoneOut').style.top = "0";
+                document.getElementById('container').style.padding = "50px 10px"
+                drops = 0;
+            }
+            else{ 
+                document.getElementById('phoneOut').style.top = "98px";
+                document.getElementById('container').style.padding = "150px 10px"
+                drops = 1;
+            }
+        }
+        function load(){
+            document.getElementById('firstBox').style.opacity = "100%";
+        }
+        addEventListener("load" , load);
+    </script>
+    <header>
+        <div class="logo">
+            <img src="../img/logos/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="pc">
+                <li><a href="../index.html">Home <span></span> </a></li>
+                <li><a href="html.html">Html <span></span></a></li>
+                <li><a href="css.html">Css <span></span></a></li>
+                <li><a href="userInterface.html">User-Interface <span></span></a></li>
+                <li><a href="userExperience.html">User-Experience <span></span></a></li>
+                <li><a href="about.html">About<span></span></a></li>
+            </ul>
+            <ul class="phoneIn phone">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span style="left: 15px;">HOME</span></a></li>
+                <li onclick="drop()"><i class="fa-solid fa-bars" style="color: white;"></i><span style="top: -20px;">NAV</span></li>              
+            </ul>
+        </nav>
+        <nav class="phone" id="phoneOut">
+            <ul>
+                <li><a href="html.html"><i class="fa-brands fa-html5"></i><span>HTML</span></a></li>
+                <li><a href="css.html"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></a></li>
+                <li><a href="userInterface.html"><i class="fa-solid fa-user-gear"></i><span>UI</span></a></li>
+                <li><a href="userExperience.html"><i class="fa-solid fa-user-check"></i><span>UX</span></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i><span>ABOUT</span></a></li>  
+            </ul>
+        </nav>
+        <div class="logo" >
+            <a href="#top"><i class="fa-solid fa-angles-right" ></i></a>
+        </div>
+    </header>
+    <main>
+        <a id="feedback" href="feedback.html"><i class="fa-solid fa-pen-to-square"></i> FeedBack</a>
+        <div id="container">
+            <div id="firstBox">
+                <h2>User Experience <i class="fa-solid fa-user-check"></i></h2>
+                <div class="secBoxContent">
+                    <ol>
+                        <li><h3>What is a User Experience?</h3>
+                        <li>User Experience is exactly what it sounds like. When a user comes on a website, they have an experience. If the site is well designed and caters for the user's needs, then they have a good experience. Otherwise, they have a bad experience
+                            and are unlikely to return to the website.</li> 
+                        <li>This interfers with how a user interacts with a webpage and how
+                            easy it may be for them.</li> 
+                    </ol>
+                    <div style="padding: 30px;">
+                        <img src="../img/logos/ux.png" alt="User Experience">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container2">
+            <div class="box">
+                <h2>User Experience Proccess</h2>
+                <img class="uxproc" src="../img/examples/uxproc.png" alt="">
+                <ul>
+                    <li>When designing a website (or any product really), the designer must answer a number of questions to decide how to best proceed:</li>
+                    <ul class="styledList">
+                        <li>What is the purpose of the site?</li>
+                        <li>Who will use the site?</li>
+                        <li>What is the main reason a user will come to the site?</li>
+                        <li>What task is the user looking to accomplish?</li>
+                        <li>How often will the user be on the site?</li>
+                        <li>How long will the user spend on the site each visit?</li>
+                        <li>Is the site for business or recreation?</li>
+                        <li>Any specific goals for the site?</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>What Affects a User's Experience?</h2>
+                <div class="boxContent">
+                    <div class="boxImg">
+                        <img src="../img/examples/uxatt.png" alt="">
+                    </div>
+                    <p>A great user experience depends on many factors. Depending on what type of site you are building, these could be very different, but there are a few that will come into play on all sites:</p>
+                    <dl>
+                        <dt>Usability</dt>
+                        <dd>Put simply, this is ease of use. If the user finds your site difficult or confusing, they will find another site to use. Your job when designing a site is to let the user accomplish their task with as little thought and few clicks
+                            as possible. As mentioned in Layout and Navigation, if you design with the user in mind, then everything sould be clear and easy for them to understand.</dd>
+                    </dl>
+                    <div class="flexBox">
+                    <div class="flexItem">
+                        <img src="../img/examples/happy.jpg" alt="User Enjoying Computer Experience">
+                    </div>
+                    <div class="flexItem">
+                        <dl>
+                            <dt>Layout</dt>
+                            <dd>Designing the layout of the page with the user in mind is essential. If the right things are given priority and are made obvious, it is much easier for the user to see what to do when they arrive on the page. The smaller the learning
+                                curve, the better.</dd>
+                            <dt>Navigation</dt>
+                            <dd>Finding their way around the site should be straightforward for the user. If they have to guess what to press or where to go then you have not designed your navigation well.</dd>
+                            <dt>Colour</dt>
+                            <dd>Color can be used to great effect for good user experience. If done right, it can bring out all sorts of reactions and emotions from a user.</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2>Dos & Don'ts of User Experience</h2>
+                <div class="boxContent flexBox">
+                    <div class="flexItem centerImg" style="padding-top: 50px;"><img style="width: 300px;" src="../img/do1.png" alt="Large tick for Dos"></div>
+                    <div class="flexItem">
+                        <h3>Do</h3>
+                        <ul class="styledList">
+                            <li>Keep language simple & concise</li>
+                            <li>Make things clear to the user</li>
+                            <li>Highlight the important functions</li>
+                            <li>Provide prompt & error messages when needed</li>
+                            <li>Use familiar interfaces that the user is already used to</li>
+                            <li>Provide as pleasant and easy an experience as possible</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxContent flexBox">
+                    <div class="flexItem centerImg" style="padding-top: 50px;"><img style="width:300px;display: block;"  src="../img/dont.png" alt="Large X for Don'ts"></div>
+                    <div class="flexItem">
+                        <h3>Don't</h3>
+                        <ul class="styledList">
+                            <li>Make things difficult for the user</li>
+                            <li>Hide any features unless necessary</li>
+                            <li>Use text when an image or button will do the job better & quicker</li>
+                            <li>Overwhelm the user with everything all at once</li>
+                            <li>Use colours that clash and make it hard for the user to look at the site</li>
+                            <li>Use new icons & button labels for features that already have a well known label</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2>Making a User's Experience Enjoyable</h2>
+                <div class="boxContent">
+                    <div class="boxTextRight">
+                        <h3>What are the qualities that create a great user experience?</h3>
+                        <ul class="styledList">
+                            <li>Functional user interface & layout</li>
+                            <li>Clear feedback for the user when attempting tasks</li>
+                            <li>Generate positive feelings of success, competency, and mastery among users</li>
+                            <li>Users have a clear mental model of the interface</li>
+                            <li>Users can confidently predict what will happen in response to their actions</li>
+                            <li>Users can forget the interface and concentrate on the task</li>
+                            <li>Calming effect - colour use, positive feedback</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2>Examples of User-Friendly Website</h2>
+                <img class="uxproc" src="../img/examples/goodux.png" alt="">
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnStatic</title>
+    <link rel="icon" type="image/x-icon" href="../img/logos/logo.png">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <script src="https://kit.fontawesome.com/c96d3426c0.js" crossorigin="anonymous"></script>
+</head>
+<body id="top">
+    <script>
+        drops = 1;
+        test = 1;
+        function slidein(){
+            if (test == 1){
+                document.getElementById('nav').style.left = "0";
+                document.getElementById('rightArrow').style.animation = "none"
+                document.getElementById('rightArrow').style.transform = "rotate(180deg)"
+                document.getElementById('rightArrow').style.right = "0"
+                test = 0;
+            }else{
+                document.getElementById('nav').style.left = "-250px";
+                document.getElementById('rightArrow').style.transform = "rotate(0deg)"
+                document.getElementById('rightArrow').style.right = "-60px"
+                test = 1;
+            }
+        }
+        function drop(){
+            if (drops == 1){ 
+                document.getElementById('phoneOut').style.top = "0";
+                document.getElementById('container').style.padding = "50px 10px"
+                drops = 0;
+            }
+            else{ 
+                document.getElementById('phoneOut').style.top = "98px";
+                document.getElementById('container').style.padding = "150px 10px"
+                drops = 1;
+            }
+        }
+        function load(){
+            document.getElementById('firstBox').style.opacity = "100%";
+        }
+        addEventListener("load" , load);
+    </script>
+    <header>
+        <div class="logo">
+            <img src="../img/logos/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="pc">
+                <li><a href="../index.html">Home <span></span> </a></li>
+                <li><a href="html.html">Html <span></span></a></li>
+                <li><a href="css.html">Css <span></span></a></li>
+                <li><a href="userInterface.html">User-Interface <span></span></a></li>
+                <li><a href="userExperience.html">User-Experience <span></span></a></li>
+                <li><a href="about.html">About<span></span></a></li>
+            </ul>
+            <ul class="phoneIn phone">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i><span style="left: 15px;">HOME</span></a></li>
+                <li onclick="drop()"><i class="fa-solid fa-bars" style="color: white;"></i><span style="top: -20px;">NAV</span></li>              
+            </ul>
+        </nav>
+        <nav class="phone" id="phoneOut">
+            <ul>
+                <li><a href="html.html"><i class="fa-brands fa-html5"></i><span>HTML</span></a></li>
+                <li><a href="css.html"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></a></li>
+                <li><a href="userInterface.html"><i class="fa-solid fa-user-gear"></i><span>UI</span></a></li>
+                <li><a href="userExperience.html"><i class="fa-solid fa-user-check"></i><span>UX</span></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i><span>ABOUT</span></a></li>    
+            </ul>
+        </nav>
+        <div class="logo" >
+            <a href="#top"><i class="fa-solid fa-angles-right" ></i></a>
+        </div>
+    </header>
+    <main>
+        <a id="feedback" href="feedback.html"><i class="fa-solid fa-pen-to-square"></i> FeedBack</a>
+        <div id="container">
+            <div id="firstBox">
+                <h2>User Interface <i class="fa-solid fa-user-gear"></i></h2>
+                <div class="secBoxContent">
+                    <ol>
+                        <li><h3>What is a User Interface?</h3>
+                        <li>A user interface is the point at which human users interact with a computer, website or application. It is what the user sees and how everything is laid out on the webpage.</li> 
+                        <li>This interfers with how a user interacts with a webpage and how
+                          easy it may be for them.</li> 
+                        <li>UI designers are responsible for the product's look and feel. UI designers can get creative and innovative and spend a lot of time to achieve an aestethically pleasing result.</li>
+                    </ol>
+                    <div>
+                        <img style="width: 90%;" src="../img/logos/ui.png" alt="user interface">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container2">
+            <div class="box">
+                <h2 class="centerHeading">User Interface</h2>
+                <h4>What do screen users want?</h4>
+                    <div>
+                        <ul class="styledList">
+                            <li>Orderly, clean, clutter-free appearance</li>
+                            <li>Expected information located where it should be</li>
+                            <li>For everything needed to be in front of the user</li>
+                            <li>Should be suitable for beginner and advanced users</li>
+                        </ul>
+                        <p>This leads to improved user production & increased satisfaction</p>
+    
+                    </div>
+                    <h4>What should a User Interface do?</h4>
+                    <div>
+                        <p>A User Interface should make it easy for a user to accomplish what it is that they want to do</p>
+                        <p>Is it more important that a website looks appealing or that the user finds it easy to use?</p>
+                    </div>
+                    <p>Jakob Nielsen : Designing Web Usability - "There are essentially two basic approaches to design: the artistic ideal of expressing yourself and the engineering ideal of solving a problem."</p>
+                    <h4>Computer User Interface Examples</h4>
+                    <div class="boxContent">
+                        <ul>
+                            <h3>Windows  <i class="fa-brands fa-windows"></i></h3>
+                            <p>Microsoft Windows was founded and introduced by Bill Gates on the 20th of November 1985. It is the most commonly used user interface by computer users as it is the most installed over nearly all computer platforms worldwide. It
+                                has developed through the years, has been updated many times for example Windows XP, 7, 8, 10 and the latest release Windows 11 </p>
+                            <h3>Mac OS  <i class="fa-brands fa-apple"></i></h3>
+                            <p>Mac OS was founded and introduced by Steve Jobs in 1984 to run Apple's personal line of Macintosh computers. Apple's version of a computer user interface was mainly focused to be easy to use for the user and to achieve the highest
+                                productivity. They were supposed to be simplistic rather than having different commands and functions to navigate around.</p>
+                            <h3>Linux  <i class="fa-brands fa-linux"></i></h3>
+                            <p>All of the fastest supercomputers run Linux. Linux is ran on smartphones, spacerockets, submarines, servers, and a range of other devices. As of 2018, there are 20,323,379 lines of code in the Linux kernel.</p>
+                        </ul>
+                    </div>
+                    <h4>Smartphones User Interface Examples</h4>
+                    <div class="boxContent flexBox">
+                        <div class="flexItem"><h3>Android  <i class="fa-brands fa-android"></i></h3>   
+                            <img style="width: 285px; display: block; margin: auto;" src="../img/examples/android.jpg" alt="">
+                        </div>
+                        <div class="flexItem"><h3>Apple  <i class="fa-brands fa-apple"></i></h3>  
+                            <img style="width: 300px; display: block; margin: auto;" src="../img/examples/iphone.jpg" alt=""> 
+                        </div>  
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
