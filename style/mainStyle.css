@@ -850,7 +850,11 @@ form{
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+#varyimg{
+    display: block; 
+    margin: 30px auto; 
+    width: 400px;
+}
 /*          MEDIA Q                    */
 
 @media screen and (max-width:1000px) {
@@ -937,6 +941,13 @@ form{
     #feedback{
         right: -125px;
     }
+    .flex-container{
+        max-width: 350px;
+        min-width: 100px;
+    }
+    #varyimg {
+        width: 300px;
+    }
 }
 @media screen and (max-width:450px) {
     #firstBox , .box , .cards{
@@ -953,6 +964,19 @@ form{
     }
     nav li{
         margin: 20px;
+    }
+    .flex-container{
+        max-width: 300px;
+        min-width: 100px;
+    }
+    #varyimg {
+        width: 250px;
+    }
+}
+@media screen and (max-width:470px) {
+    .flex-container{
+        max-width: 250px;
+        min-width: 100px;
     }
 }
 @media screen and (max-width:350px) {
@@ -971,7 +995,13 @@ form{
     #feedback{
         right: -100px;
     }
-
+    .flex-container{
+        max-width: 200px;
+        min-width: 100px;
+    }
+    #varyimg {
+        width: 230px;
+    }
 
 
 
