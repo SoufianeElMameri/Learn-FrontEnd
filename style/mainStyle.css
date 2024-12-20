@@ -978,6 +978,9 @@ form{
         max-width: 250px;
         min-width: 100px;
     }
+    #rightArrow {
+        font-size: 40px;
+    }
 }
 @media screen and (max-width:350px) {
     nav li{
